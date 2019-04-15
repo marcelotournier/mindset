@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/grayscale.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="brand-heading">Quem é você?</h2>
+              <p class="intro-text">Descubra gratuitamente qual é o seu perfil comportamental.
+                <br>O auto-conhecimento é o primeiro passo para grandes conquistas!</p>
+              <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>O que é o Perfil DISC?</h2>
+            <p>O DISC Assessment, em menos de 7 minutos, fornece um relatório com mais de 97% de acerto e mais de 50 informações correlacionadas e importantes sobre os avaliados: sua forma de trabalho; fatores motivacionais; nível de adequação ao cargo; de estresse; de energia para executar as atividades; potencial de trabalho e muito mais.
+</p>
+<p>Com este volume de informações, os gestores e profissionais de RH têm em mãos informações precisas para tomar decisões sobre contratação, mudança de área, adequação do perfil ao cargo, engenharia de equipes por comportamento, redução de turnover, delegação de tarefas mais assertivamente e maior satisfação no trabalho.
+</p>
+<a href="#download" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section text-center">
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <br>
+          <br>
+          <br>
+          <h2>Prepare-se para se conhecer melhor</h2>
+          <p>Preencha o questionário abaixo, para receber por e-mail gratuitamente o seu perfil de comportamento completo.
+<br>
+<br>
+<span style="color: red;">ATENÇÃO - NENHUMA QUESTÃO PODE FICAR SEM RESPOSTA</span>
+<br>
+<br>
+{% block content %}
+     <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {% if success %}<span style="color: yellow;"><p><h2>Obrigado!</h2></p><p>Em alguns minutos, você receberá seu perfil por e-mail.</p></span>{% endif %}
+        <div class="ui-menu">
+        <p>
+            Seu nome:<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            Seu e-mail:<br>
+            {{ form.email(size=32) }}<br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+	Sexo:<br>
+        {{ form.sex }}
+        {% for error in form.sex.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+	<p>
+	Qual das opções abaixo melhor define você?<br>
+	{{ form.perg1 }}
+	{% for error in form.perg1.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+	</p>
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg2 }}
+        {% for error in form.perg2.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+	</p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg3 }}
+        {% for error in form.perg3.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg4 }}
+        {% for error in form.perg4.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg5 }}
+        {% for error in form.perg5.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg6 }}
+        {% for error in form.perg6.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg7 }}
+        {% for error in form.perg7.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg8 }}
+        {% for error in form.perg8.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg9 }}
+        {% for error in form.perg9.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg10 }}
+        {% for error in form.perg10.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg11 }}
+        {% for error in form.perg11.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg12 }}
+        {% for error in form.perg12.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg13 }}
+        {% for error in form.perg13.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg14 }}
+        {% for error in form.perg14.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg15 }}
+        {% for error in form.perg15.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg16 }}
+        {% for error in form.perg16.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg17 }}
+        {% for error in form.perg17.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg18 }}
+        {% for error in form.perg18.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg19 }}
+        {% for error in form.perg19.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg20 }}
+        {% for error in form.perg20.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg21 }}
+        {% for error in form.perg21.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg22 }}
+        {% for error in form.perg22.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg23 }}
+        {% for error in form.perg23.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg24 }}
+        {% for error in form.perg24.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg25 }}
+        {% for error in form.perg25.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg26 }}
+        {% for error in form.perg26.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg27 }}
+        {% for error in form.perg27.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg28 }}
+        {% for error in form.perg28.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg29 }}
+        {% for error in form.perg29.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg30 }}
+        {% for error in form.perg30.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg31 }}
+        {% for error in form.perg31.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg32 }}
+        {% for error in form.perg32.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>        
+	Qual das opções abaixo melhor define você?<br>
+        {{ form.perg33 }}
+        {% for error in form.perg33.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg34 }}
+        {% for error in form.perg34.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg35 }}
+        {% for error in form.perg35.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg36 }}
+        {% for error in form.perg36.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg37 }}
+        {% for error in form.perg37.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg38 }}
+        {% for error in form.perg38.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg39 }}
+        {% for error in form.perg39.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg40 }}
+        {% for error in form.perg40.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+        </div>
+        <p>{{ form.submit() }}</p>
+        <br>
+        
+        <br>
+        <br>
+    </form>
+
+{% endblock %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contato</h2>
+            <p>Faça contato ou siga-nos em nossas redes sociais</p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/marcelotournier" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:marcelo@inova.life" class="btn btn-default btn-lg">
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <span class="network-name">E-mail</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-linkedin fa-fw"></i>
+                  <span class="network-name">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section 
+    <div id="map"></div> -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; InovaLIFE, 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
+
+    <!-- Custom scripts for this template 
+    <script src="static/js/grayscale.min.js"></script> -->
+  </body>
+
+</html>

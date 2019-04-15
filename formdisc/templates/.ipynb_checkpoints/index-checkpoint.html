@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Logo Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" width="150" height="50" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <h1 class="mt-5">Logo Nav by Start Bootstrap</h1>
+      {% block content %}
+     <center>
+     <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {% if success %}<span style="color: yellow;"><p><h2>Obrigado!</h2></p><p>Em alguns minutos, você receberá seu perfil por e-mail.</p></span>{% endif %}
+        <div class="ui-menu">
+        <p>
+            Seu nome:<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            Seu e-mail:<br>
+            {{ form.email(size=32) }}<br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+	Sexo:<br>
+        {{ form.sex }}
+        {% for error in form.sex.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+	<p>
+	Qual das opções abaixo melhor define você?<br>
+	{{ form.perg1 }}
+	{% for error in form.perg1.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+	</p>
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg2 }}
+        {% for error in form.perg2.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+	</p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg3 }}
+        {% for error in form.perg3.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg4 }}
+        {% for error in form.perg4.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg5 }}
+        {% for error in form.perg5.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg6 }}
+        {% for error in form.perg6.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg7 }}
+        {% for error in form.perg7.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg8 }}
+        {% for error in form.perg8.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg9 }}
+        {% for error in form.perg9.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg10 }}
+        {% for error in form.perg10.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg11 }}
+        {% for error in form.perg11.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg12 }}
+        {% for error in form.perg12.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg13 }}
+        {% for error in form.perg13.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg14 }}
+        {% for error in form.perg14.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg15 }}
+        {% for error in form.perg15.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg16 }}
+        {% for error in form.perg16.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg17 }}
+        {% for error in form.perg17.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg18 }}
+        {% for error in form.perg18.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg19 }}
+        {% for error in form.perg19.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg20 }}
+        {% for error in form.perg20.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg21 }}
+        {% for error in form.perg21.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg22 }}
+        {% for error in form.perg22.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg23 }}
+        {% for error in form.perg23.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg24 }}
+        {% for error in form.perg24.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg25 }}
+        {% for error in form.perg25.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg26 }}
+        {% for error in form.perg26.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg27 }}
+        {% for error in form.perg27.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg28 }}
+        {% for error in form.perg28.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg29 }}
+        {% for error in form.perg29.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg30 }}
+        {% for error in form.perg30.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg31 }}
+        {% for error in form.perg31.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg32 }}
+        {% for error in form.perg32.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>        
+	Qual das opções abaixo melhor define você?<br>
+        {{ form.perg33 }}
+        {% for error in form.perg33.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg34 }}
+        {% for error in form.perg34.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg35 }}
+        {% for error in form.perg35.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg36 }}
+        {% for error in form.perg36.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg37 }}
+        {% for error in form.perg37.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg38 }}
+        {% for error in form.perg38.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg39 }}
+        {% for error in form.perg39.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+
+        <p>
+        Qual das opções abaixo melhor define você?<br>
+        {{ form.perg40 }}
+        {% for error in form.perg40.errors %}
+            <span style="color: red;">Este campo precisa ser preenchido</span>
+        {% endfor %}
+        </p>
+        </div>
+        <p>{{ form.submit() }}</p>
+        <br>
+        
+        <br>
+        <br>
+    </form>
+</center>
+{% endblock %}
+      
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
